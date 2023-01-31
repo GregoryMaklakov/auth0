@@ -1,0 +1,32 @@
+@use '../components/utils' as u;
+
+
+*,
+*:after,
+*::before {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: u.$base-font-size;
+  background-color: u.$color-bg;
+}
+
+body {
+  font-family: u.$primary-font;
+  color: u.$base-font-color;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(800px + u.$mobile-container-padding-x);
+  padding: {
+    left: u.$mobile-container-padding-x;
+    right: u.$mobile-container-padding-x;
+  }
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
