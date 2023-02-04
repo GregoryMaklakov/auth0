@@ -1,54 +1,166 @@
+@use '../components/utils' as u;
 
+.header {
+    height: 40px;
+    background-color: u.$dark-purple;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-weight: 500;
+        font-size: u.rem(14);
+        line-height: 160%;
+        color: u.$color-white;
+        @include u.media('tablet-wide', max){
+            justify-content: center;
+        }
+    }
+
+    &__container--primary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 64px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    &__top-regist {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__top-button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        @include u.media('tablet-wide', max){
+            display: none;
+        }
+        span {
+            font-size: 14px;
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline
+                }
+            }
+        }
+    }
+
+    &__top-actions {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        @include u.media('tablet-wide', max){
+            display: none;
+        }
+    }
+
+    &__top-actions-btn {
+        transition: all 0.2s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: u.$base-font-color;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__top-language {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__primary {
+        background-color: u.$color-bg-grey;
+        transition: all 0.2s ease 0s;
+        border-radius: 0px 0px 20px 20px;
+        box-shadow: 0px 1px 0px 0px rgba(66, 68, 90, 0.39);
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: u.$color-white;
+                box-shadow: none;
+            }
+        }
+    }
+
+    &__logo {
+        width: u.percent(300, 1158);
+        margin-right: 10px;
+        z-index: 101;
+        @include u.media('desktop', max){
+            width: 80px;
+        }
+    }
+
+    &__menu {}
+
+    &__actions {}
+
+    &__actions-singin {}
+
+    &__actions-contact {}
+}
 
 
 //========================================================================================================================================================
 //Burger
-// .icon-menu {
-// 	display: none;
-// 	@media (max-width: $tablet) {
-// 		display: block;
-// 		position: relative;
-// 		width: 40px; // задаем ширину бургера что бы его не плющело (width - не подходит)
-// 		height: rem(23);
-// 		z-index: 10;
-// 		@media (any-hover: none) {
-// 			cursor: default;
-// 		}
-// 		span,
-// 		&::before,
-// 		&::after {
-// 			content: "";
-// 			transition: all 0.3s ease 0s;
-// 			right: 0;
-// 			position: absolute;
-// 			width: 100%;
-// 			height: rem(2);
-// 			background-color: #fff;
-// 		}
-// 		&::before {
-// 			top: 0;
-// 		}
-// 		&::after {
-// 			bottom: 0;
-// 		}
-// 		span {
-// 			top: calc(50% - rem(1));
-// 		}
-// 		.menu-open & {
-// 			span {
-// 				width: 0;
-// 			}
-// 			&::before,
-// 			&::after {
-// 			}
-// 			&::before {
-// 				top: calc(50% - rem(1));
-// 				transform: rotate(-45deg);
-// 			}
-// 			&::after {
-// 				bottom: calc(50% - rem(1));
-// 				transform: rotate(45deg);
-// 			}
-// 		}
-// 	}
-// }
+.icon-menu {
+	display: none;
+	@include u.media('tablet-wide', max) {
+		display: block;
+		position: relative;
+		width: 21px; // задаем ширину бургера что бы его не плющело (width - не подходит)
+		height: u.rem(16);
+		z-index: 10;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: u.rem(2);
+			background-color: u.$base-font-color;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - u.rem(1));
+		}
+		&.active {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - u.rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - u.rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

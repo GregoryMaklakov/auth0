@@ -1,0 +1,62 @@
+@use 'utils' as u;
+
+
+.dropdown {
+    @include u.media('tablet-wide', max){
+        display: none
+    }
+    &__card {
+        margin-top: 48px;
+        padding: 12px 24px;
+        box-shadow: 0px 8px 34px -15px rgba(66, 68, 90, 0.54);
+        border-radius: 6px;
+        background-color: u.$color-bg;
+    }
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            border-right: 0.1rem solid rgb(218, 223, 232);
+        }
+        &:not(:first-child) {
+            margin-left: 24px;
+        }
+        height: 100%;
+    }
+
+    &__title {
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 0.15rem;
+        color: rgb(140, 146, 156);
+        line-height: 1.54rem;
+    }
+
+    &__list-column {
+        padding: 12px 24px 12px 0px;
+        min-width: 200px;
+        min-height: 100%;
+    }
+
+    &__item-child {
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: u.$base-font-color;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                color: u.$purple;
+            }
+        }
+    }
+}

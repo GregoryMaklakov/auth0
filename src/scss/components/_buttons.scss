@@ -1,0 +1,106 @@
+@use 'utils' as u;
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    gap: 10px;
+    transition: all 0.2s ease 0s;
+    font-weight: 500;
+    font-size: u.rem(16);
+
+    &__menu {
+        display: none;
+        padding-right: 16px;
+        padding-left: 16px;
+        padding-bottom: 32px;
+    }
+
+    &__row-singup {
+        margin-right: 16px
+    }
+
+    @include u.media('tablet-wide', max) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__row {
+        width: 100%;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__white {
+        padding: 11px 20px;
+        width: 50%;
+        height: 47px;
+        box-shadow: 0 0 0 1px u.$base-font-color;
+        display: flex;
+        flex-direction: row;
+        &:focus {
+            box-shadow: 0 0 0 1px u.$dark-purple;
+            color: u.$dark-purple;
+
+            svg {
+                fill: u.$dark-purple;
+            }
+        }
+    }
+
+    &__white--small {
+        background: transparent;
+        padding: 5px 20px;
+        border-radius: 8px;
+        min-width: 98px;
+        height: 32px;
+        border-radius: 8px;
+        margin-left: 24px;
+        &:hover {
+            background: u.$dark-purple;
+            color: u.$color-white;
+            box-shadow: 0 0 0 1px u.$dark-purple;
+        }
+    }
+
+
+    &__contact {
+        background: u.$purple;
+        padding: 11px 20px;
+        height: 47px;
+        color: u.$color-white;
+        box-shadow: 0 0 0 1px u.$purple;
+        display: flex;
+        flex-direction: row;
+        &:focus {
+            box-shadow: 0 0 0 2px u.$dark-purple;
+        }
+    }
+
+    &__contact--small {
+        height: 32px;
+        min-width: 132px;
+        border-radius: 8px;
+        &:hover {
+            background: u.$dark-purple;
+            color: u.$color-white;
+            box-shadow: 0 0 0 1px u.$dark-purple;
+        }
+    }
+
+    &__icon-arrow {
+        @include u.size(13.33px);
+    }
+
+    &__icon-arrow--white {
+        fill: u.$color-white ;
+    }
+
+    &__icon-arrow--black {
+        fill: u.$base-font-color;
+    }
+}
