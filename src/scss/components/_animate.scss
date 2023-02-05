@@ -1,5 +1,44 @@
 @use 'utils' as u;
 
+// menu item animation
+@keyframes focus-in-expand-fwd {
+    0% {
+        letter-spacing: -0.5em;
+        transform: translateZ(-800px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateZ(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+// text color hero
+@keyframes textColor {
+    0% {
+      color: u.$purple;
+    }
+    50% {
+      color: #6c69d2;
+    }
+    100% {
+      color: #5169ed;
+    }
+}
+@keyframes textColorSecond {
+    0% {
+      color: u.$pink;
+    }
+    50% {
+      color: #FF44DD;
+    }
+    100% {
+      color: #FE495B;
+    }
+}
 //========================================================================================================================================================
 
 // logo animation
@@ -33,4 +72,3 @@
 
 //========================================================================================================================================================
 
-// dropdown animate

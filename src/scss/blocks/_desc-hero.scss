@@ -1,0 +1,53 @@
+@use '../components/utils' as u;
+
+.desc-hero {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 136%;
+    letter-spacing: -0.02em;
+    color: #1E212A;
+    @include u.media('desktop', max){
+        font-size: 52px;
+    }
+    @include u.media('tablet', max){
+        font-size: 40px;
+        line-height: 146%;
+    }
+    &__title {
+    }
+    &__title--mobile {
+        @include u.media('tablet', max){
+            display: block;
+         }
+    }
+    &__br-desktop {
+        @include u.media('tablet', max){
+            display: none;
+         }
+    }
+    &__br-mobile {
+        display: none;
+        @include u.media('tablet', max){
+                display: block;
+        }
+    }
+
+    &__animation {}
+
+    &__text-first {
+        color: u.$purple;
+        animation: textColor 10s ease infinite;
+        border: 1px solid #C3C3C3;
+        border-radius: 20px;
+        padding: 0px 16px;
+    }
+    &__text-second {
+        color: u.$pink;
+        animation: textColorSecond 10s ease infinite;
+        border: 1px solid #C3C3C3;
+        border-radius: 20px;
+        padding: 0px 16px;
+    }
+}

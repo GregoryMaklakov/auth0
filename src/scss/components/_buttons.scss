@@ -42,6 +42,7 @@
         box-shadow: 0 0 0 1px u.$base-font-color;
         display: flex;
         flex-direction: row;
+
         &:focus {
             box-shadow: 0 0 0 1px u.$dark-purple;
             color: u.$dark-purple;
@@ -60,10 +61,16 @@
         height: 32px;
         border-radius: 8px;
         margin-left: 24px;
+
         &:hover {
             background: u.$dark-purple;
             color: u.$color-white;
             box-shadow: 0 0 0 1px u.$dark-purple;
+        }
+        &:focus {
+            background: transparent;
+            box-shadow: 0 0 0 2px u.$dark-purple;
+            color: u.$dark-purple;
         }
     }
 
@@ -76,8 +83,15 @@
         box-shadow: 0 0 0 1px u.$purple;
         display: flex;
         flex-direction: row;
+        
+        &:hover {
+            background: u.$dark-purple;
+            color: u.$color-white;
+            box-shadow: 0 0 0 1px u.$dark-purple;
+        }
         &:focus {
             box-shadow: 0 0 0 2px u.$dark-purple;
+            background: u.$purple;
         }
     }
 
@@ -85,11 +99,17 @@
         height: 32px;
         min-width: 132px;
         border-radius: 8px;
+
         &:hover {
             background: u.$dark-purple;
             color: u.$color-white;
             box-shadow: 0 0 0 1px u.$dark-purple;
         }
+        &:focus {
+            box-shadow: 0 0 0 2px u.$dark-purple;
+            background: u.$purple;
+        }
+        
     }
 
     &__icon-arrow {
