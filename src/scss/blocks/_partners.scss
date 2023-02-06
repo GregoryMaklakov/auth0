@@ -1,0 +1,85 @@
+@use '../components/utils' as u;
+
+@keyframes scroll {
+    0% {
+        transform: translate(0, 0);
+    }
+    100%{
+        transform: translate(-250%, 0);
+      }
+}
+.partners {
+    min-height: 266px;
+    display: flex;
+    align-items: center;
+    &__container {
+        max-width: u.rem(1400);
+        overflow: hidden;
+        position: relative;
+        &::before,
+        &::after {
+            content:'';
+            height: 100%;
+            position: absolute;
+            width: 10rem;
+            z-index: 2;
+        }
+        &::before{
+            background: linear-gradient(to right, white 20%, rgba(255, 255, 255, 0) 100%);
+            left: 0px;
+            top: 0px;
+        }
+        &::after{
+            background: linear-gradient(to left, white 20%, rgba(255, 255, 255, 0) 100%);
+            top: 0;
+            right: 0;
+        }
+    }
+    &__block {
+        position: relative;
+    }
+    &__button {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        z-index: 3;
+        opacity: 0;
+        transition: all 0.2s ease 0s;
+        background-color: rgba(28,28,28,0.6);
+        &:active {
+            color: u.$pink;
+            svg {
+                fill: u.$pink;
+            }
+        }
+        @media (any-hover: hover){
+            &:hover{
+                opacity: 1;
+                background-color: rgba(28,28,28,0.6);
+                box-shadow: none;
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        animation: 90s linear 0s infinite normal none running scroll;
+        @include u.media('phone', max){
+            animation: 14s linear 0s infinite normal none running scroll;
+        }
+        }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 104px;
+        }
+        @include u.media('tablet-small', max){
+            margin-right: 72px;
+        }
+    }
+}
+

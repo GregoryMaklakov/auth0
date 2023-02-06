@@ -20,7 +20,7 @@
     }
 
     &__info {
-        width: u.percent(800, 1158);
+        width: u.percent(820, 1158);
         z-index: 3;
         @include u.media('tablet-medium', max){
             width: 100%;

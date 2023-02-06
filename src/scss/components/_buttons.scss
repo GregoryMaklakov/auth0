@@ -113,6 +113,7 @@
     }
 
     &__icon-arrow {
+        transition: all 0.3s ease 0s;
         @include u.size(13.33px);
     }
 
