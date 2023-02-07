@@ -9,12 +9,16 @@
 @use './components/dropdown';
 @use './components/form';
 @use './components/buttons';
+@use './components/title';
+@use './components/swiper-slider';
 
 // Blocks
 @use './blocks/header';
 @use './blocks/hero';
 @use './blocks/desc-hero';
 @use './blocks/partners';
+@use './blocks/ciam';
+@use './blocks/info-ciam';
 
 
 // Подключение шрифтов ===========================================================================================================================================================================================================================================================================

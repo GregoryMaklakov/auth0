@@ -1,0 +1,102 @@
+@use '../components/utils' as u;
+
+
+.ciam {
+    max-width: 1440px;
+    margin: 0 auto;
+    &__block {
+        display: flex;
+        flex-direction: row;
+        background: #EEF0F2;
+        padding: 100px;
+        align-items: center;
+        border-radius: 40px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__sliders {
+        width: 50%;
+    }
+}
+
+.main-slider {
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    position: absolute;
+    height: auto;
+    width: 441px;
+
+    &__wrapper {
+        overflow: hidden;
+        display: flex;
+        border-radius: 0px 0px 0px 40px;
+    }
+
+    &__slide {
+        animation: 15s ease-in-out 0s infinite normal backwards running slide;
+        img {
+            max-width: 441px;
+            height: auto;
+        }
+    }
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    95% {
+        transform: translateX(-300%)
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+.secondary-slider {
+    width: 351px;
+    height: 535px;
+    background-color: #fff;
+    height: auto;
+    z-index: 3;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    border-radius: 40px;
+    transform: translateY(-50%) translateX(-29%);
+    right: 50%;
+
+    &__wrapper {
+        overflow: hidden;
+        display: flex;
+    }
+
+    &__slide {
+        animation: 15s ease-in-out 0s infinite normal backwards running slide;
+        img {
+            max-width: 351px;
+            height: auto;
+        }
+    }
+}

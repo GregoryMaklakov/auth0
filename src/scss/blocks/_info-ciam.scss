@@ -1,0 +1,38 @@
+@use '../components/utils' as u;
+
+.info-ciam {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 480px;
+
+    &__title {
+        margin-bottom: 32px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: u.rem(18);
+        line-height: 130%;
+        color: u.$base-font-color;
+        margin-bottom: 48px;
+        a {
+            color: u.$dark-purple;
+            transition: all 0.3s ease 0s;
+            @media (any-hover: hover){
+                &:hover{
+                    color: u.$purple;
+                }
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 24px;
+    }
+
+    &__btn {
+        min-width: 168px;
+    }
+}

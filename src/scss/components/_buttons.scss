@@ -42,7 +42,14 @@
         box-shadow: 0 0 0 1px u.$base-font-color;
         display: flex;
         flex-direction: row;
-
+        &:hover {
+            background: u.$dark-purple;
+            color: u.$color-white;
+            box-shadow: 0 0 0 1px u.$dark-purple;
+            svg {
+                fill: u.$color-white;
+            }
+        }
         &:focus {
             box-shadow: 0 0 0 1px u.$dark-purple;
             color: u.$dark-purple;
