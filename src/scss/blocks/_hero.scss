@@ -10,13 +10,14 @@
     overflow: hidden;
     max-width: 1440px;
     margin: 0 auto;
-    
+
     &__container {
         display: flex;
         align-items: center;
         min-height: 100vh;
         padding-bottom: 74px;
-        @include u.media('tablet-medium', max){
+
+        @include u.media('tablet-medium', max) {
             flex-direction: column;
         }
 
@@ -25,32 +26,35 @@
     &__info {
         width: u.percent(820, 1158);
         z-index: 3;
-        @include u.media('tablet-medium', max){
+
+        @include u.media('tablet-medium', max) {
             width: 100%;
         }
     }
+
     &__descriprtion {
         margin-bottom: 106px;
-        @include u.media('tablet-medium', max){
+
+        @include u.media('tablet-medium', max) {
             margin-bottom: 72px;
         }
     }
 
-    &__form {
-        
-    }
+    &__form {}
 
     &__images {
         @include u.padding-hack(35%);
         width: 257px;
         z-index: 2;
-        @include u.media('tablet-medium', max){
+        @include u.media('tablet-medium', max) {
             @include u.padding-hack(70%);
         }
-        @include u.media('phone-wide', max){
+
+        @include u.media('phone-wide', max) {
             @include u.padding-hack(100%);
         }
     }
+
     &__background {
         position: absolute;
         bottom: -25px;
@@ -58,10 +62,11 @@
         height: 100%;
         z-index: 1;
 
-        @include u.media('tablet-wide', max){
+        @include u.media('tablet-wide', max) {
             right: -20%;
         }
-        @include u.media('tablet-medium', max){
+
+        @include u.media('tablet-medium', max) {
             bottom: 0;
             left: 0;
             right: 0;
@@ -69,13 +74,15 @@
     }
 
     &__background-image {
-        @include u.media('tablet-medium', max){
+        @include u.media('tablet-medium', max) {
             display: none;
         }
     }
+
     &__background-image-mob {
         display: none;
-        @include u.media('tablet-medium', max){
+
+        @include u.media('tablet-medium', max) {
             position: absolute;
             display: block;
             width: 100vw;
@@ -87,5 +94,3 @@
         }
     }
 }
-
-

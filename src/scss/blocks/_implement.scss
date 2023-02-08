@@ -1,0 +1,30 @@
+@use '../components/utils' as u;
+
+
+.implement {
+    padding-top: 40px;
+    margin-bottom: 40px;
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: u.rem(32);
+        line-height: 39px;
+        color: u.$base-font-color;
+        margin-bottom: 40px;
+        @include u.media('desktop', max){
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+    &__wrp {
+        @include u.padding-hack(68%);
+    }
+    &__video {
+        
+        
+    }
+}

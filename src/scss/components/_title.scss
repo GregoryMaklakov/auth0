@@ -22,6 +22,9 @@
     &--fz64 {
         font-size: 64px;
         line-height: 110%;
+        @include u.media('desktop', max){
+            font-size: 32px;
+            line-height: 130%;
+        }
     }
-    
 }
