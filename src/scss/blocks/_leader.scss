@@ -1,0 +1,53 @@
+@use '../components/utils' as u;
+
+
+.leader {
+    //background: url(https://cdn.auth0.com/website/gartner/bg-desktop.svg) center center / cover no-repeat rgb(218, 223, 232);
+    background: linear-gradient(to right, #8377F3 0%, #e02cbf 19%, #8377F3 40%, #8377F3 60%, #e02cbf 83%, #8377F3 100%);
+    background-size: 200% 100%;
+    animation: bg 15s linear infinite;
+    padding: 130px 0px;
+    max-width: 1440px;
+    margin: 0 auto;
+    border-radius: 40px;
+    @include u.media('tablet-wide', max){
+        padding: 30px 0px;
+    }
+    &__container {
+        @include u.media('tablet-wide', max){
+            padding-left: 0;
+            padding-right: 0;
+        } 
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        @include u.media('tablet-wide', max){
+            flex-direction: column;
+        }
+    }
+
+    &__information {
+        @include u.media('phone-wide', max){
+            margin-bottom: 56px;
+        }
+    }
+    &__button {
+        @include u.media('tablet-wide', max){
+            width: 100%;
+        }
+    }
+    &__image {
+        width: 554px;
+        height: 554px;
+        @include u.padding-hack(49%);
+        @include u.media('tablet-wide', max){
+            @include u.padding-hack(95%);
+            width: 90%;
+            
+        }
+    }
+}
