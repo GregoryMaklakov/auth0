@@ -32,6 +32,11 @@
         padding-top: 16px;
         padding-bottom: 16px;
     }
+    &__top-text {
+        @include u.media('phone-wide', max){
+            font-size: u.rem(10);
+        }
+    }
 
     &__top-regist {
         display: flex;

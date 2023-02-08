@@ -15,6 +15,9 @@
     &--fz48 {
         font-size: 48px;
         line-height: 130%;
+        @include u.media('desktop', max){
+            font-size: u.rem(32);
+        }
     }
     &--fz64 {
         font-size: 64px;
