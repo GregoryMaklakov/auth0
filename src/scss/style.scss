@@ -15,13 +15,22 @@
 // Blocks
 @use './blocks/header';
 @use './blocks/hero';
-@use './blocks/desc-hero';
 @use './blocks/partners';
 @use './blocks/ciam';
-@use './blocks/info-block';
 @use './blocks/implement';
 @use './blocks/leader';
 @use './blocks/youcando';
+@use './blocks/optimize';
+@use './blocks/resources';
+@use './blocks/building';
+@use './blocks/footer';
+
+
+//---
+@use './blocks/desc-hero';
+@use './blocks/info-block';
+@use './blocks/opti-block';
+@use './blocks/gymshark';
 
 
 

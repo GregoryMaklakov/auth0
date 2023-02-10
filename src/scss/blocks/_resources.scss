@@ -1,0 +1,170 @@
+
+@use '../components/utils' as u;
+
+.resources {
+    padding-bottom: 160px;
+    &__container {
+    }
+
+    &__title {
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 500;
+        font-size: u.rem(14);
+        letter-spacing: 0.015em;
+        text-transform: uppercase;
+        color: u.$base-font-color;
+        width: 100%;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #C3C3C3;
+        margin-bottom: 32px;
+    }
+
+    &__block {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        grid-template-areas:
+        "first second"
+        "first third";
+        @include u.media('tablet', max){
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    &__item {
+        padding: 32px;
+        border-radius: 24px;
+        transition: all 0.7s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                transform: scale(1.03);
+            }
+        }
+        &:nth-child(1) {
+            background: url(../assets/svg/resources/line_1.svg) right bottom no-repeat, linear-gradient(76.81deg, rgb(236, 88, 201) 0%, rgb(238, 92, 91) 99.59%);
+            color: u.$color-white;
+            grid-area: first / first / first / first;
+
+        }
+        &:nth-child(2) {
+            background: url(../assets/svg/resources/line_2.svg) right bottom no-repeat, rgb(239, 240, 242);
+            grid-area: second / second / second / second;
+        }
+        &:nth-child(3) {
+            background: url(../assets/svg/resources/line_3.svg) right bottom no-repeat, rgb(239, 240, 242);
+            grid-area: third / third / third / third;
+        }
+    }
+}
+
+.resuorces-card:hover .resuorces-card__header .resuorces-card__link {
+    text-decoration: underline;
+}
+
+.resuorces-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &__header--grey {
+        max-width: 255px;
+        margin-bottom: 14px;
+        @include u.media('phone-wide', max){
+            max-width: 140px;
+        }
+    }
+
+    &__title {
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 500;
+        font-size: u.rem(14);
+        letter-spacing: 0.015em;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+        @include u.media('phone-wide', max){
+            font-size: u.rem(12);
+            line-height: 130%;
+        }
+
+    }
+
+    &__title--white {
+        color: u.$color-white;
+    }
+
+    &__link {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 39px;
+        @include u.media('phone-wide', max){
+            font-size: u.rem(18);
+            margin-bottom: u.rem(32);
+            line-height: 130%;
+        }
+    }
+    &__link--grey {
+        font-size: 24px;
+        @include u.media('phone-wide', max){
+            font-size: u.rem(14);
+            line-height: 130%;
+        }
+    }
+
+
+    &__footer {
+        width: 100%;
+    }
+
+    &__text {
+        padding-bottom: 6px;
+        padding-top: 6px;
+        border-bottom: 1px solid u.$color-white;
+
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 400;
+        font-size: u.rem(32);
+        line-height: 130%;
+        @include u.media('phone-wide', max){
+            font-size: u.rem(20);
+        }
+    }
+
+    &__text--m2 {
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 500;
+        font-size: u.rem(64);
+        letter-spacing: -0.02em;
+        @include u.media('phone-wide', max){
+            font-size: u.rem(40);
+        }
+    }
+
+    &__title-purple {
+        color: u.$purple;
+    }
+
+    &__text--grey-cart {
+        font-weight: 400;
+        font-size: u.rem(18);
+        line-height: 130%;
+        color: #65676E;
+        border-bottom: 1px solid transparent;
+        max-width: 255px;
+        @include u.media('phone-wide', max){
+            font-size: u.rem(12);
+        }
+
+    }
+
+    &__title--green {
+        color: #13A688;
+    }
+}

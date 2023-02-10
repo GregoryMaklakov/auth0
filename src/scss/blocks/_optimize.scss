@@ -1,0 +1,33 @@
+@use '../components/utils' as u;
+
+.optimize {
+    background: u.$color-bg-grey;
+    border-radius: 40px;
+    padding-top: 104px;
+    padding-bottom: 64px;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 168px;
+    @include u.media('tablet', max){
+        padding-top: 54px;
+        padding-bottom: 54px;
+        margin-bottom: 120px;
+    }
+    &__container {
+    }
+
+    &__title {
+        margin-bottom: 48px;
+    }
+
+    &__block {
+    }
+}
+
+
+
+
+
+
+

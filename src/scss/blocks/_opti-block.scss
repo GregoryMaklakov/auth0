@@ -1,0 +1,136 @@
+@use '../components/utils' as u;
+
+.opti-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 108px;
+    @include u.media('tablet-wide', max) {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        grid-template-columns: repeat(4, 266px);
+        border: 1px solid #C3C3C3;
+        border-radius: 12px;
+        margin-bottom: 30px;
+    }
+
+    &__name {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-bottom: 24px;
+        @include u.media('tablet-wide', max){
+            padding-top: 18px;
+            padding-left: 16px;
+        }
+        img {
+            margin-right: 6px;
+        }
+    }
+
+    &__name--2 {
+        background: linear-gradient(to right, rgb(238, 93, 74) 90%, rgb(236, 88, 215)) left bottom / 100% 0.2rem no-repeat;
+    }
+
+    &__name--3 {
+        background: linear-gradient(to right, rgb(236, 88, 215) 90%, rgb(97, 98, 246)) left bottom / 100% 0.2rem no-repeat;
+    }
+
+    &__name--4 {
+        background: linear-gradient(to right, rgb(97, 98, 246) 90%, rgb(19, 166, 136)) left bottom / 100% 0.2rem no-repeat;
+    }
+
+    &__name--5 {
+        background: linear-gradient(to right, rgb(19, 166, 136) 90%, rgb(19, 166, 136)) left bottom / 100% 0.2rem no-repeat;
+    }
+
+    &__item {
+        position: relative;
+        @include u.media('tablet-wide', max){
+            border: 0.5px solid #C3C3C3;
+        }
+    }
+
+    &__item--1 {}
+
+    &__item--2 {
+        h3 {
+            color: #EE5D4A;
+        }
+    }
+
+    &__item--3 {
+        h3 {
+            color: u.$pink;
+        }
+    }
+
+    &__item--4 {
+        h3 {
+            color: u.$purple
+        }
+    }
+
+    &__item--5 {
+        h3 {
+            color: #13A688;
+        }
+    }
+
+    &__item--6 {}
+
+    &__title {
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 500;
+        font-size: u.rem(14);
+        line-height: 130%;
+        letter-spacing: 0.015em;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        color: u.$purple;
+
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        svg {
+            fill: u.$purple;
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-top: 16px;
+        @include u.media('tablet-wide', max){
+            padding-left: 16px;
+            padding-bottom: 24px;
+        }
+    }
+
+    &__list-item {
+        padding: 12px 22px 13px;
+        background: u.$color-white;
+        border-radius: 100px;
+    }
+
+    &__divider {
+        display: block;
+        position: absolute;
+        height: 110rem;
+        right: 0px;
+        top: -60rem;
+        width: 0.1rem;
+        background: rgb(201, 202, 206);
+        mix-blend-mode: darken;
+        @include u.media('tablet-wide', max){
+            display: none;
+        }
+    }
+}
