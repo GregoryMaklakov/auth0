@@ -15,8 +15,7 @@
     font-size: 40px;
     line-height: 146%;
   }
-  &__title {
-  }
+
   &__title--mobile {
     @include u.media("tablet", max) {
       display: block;
@@ -32,9 +31,6 @@
     @include u.media("tablet", max) {
       display: block;
     }
-  }
-
-  &__animation {
   }
 
   &__text-first {

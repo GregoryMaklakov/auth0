@@ -147,9 +147,7 @@
       span {
         width: 0;
       }
-      &::before,
-      &::after {
-      }
+
       &::before {
         top: calc(50% - u.rem(1));
         transform: rotate(-45deg);

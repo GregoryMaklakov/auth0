@@ -1,30 +1,33 @@
-@use 'utils' as u;
+@use "utils" as u;
 
 .title {
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    font-weight: 500;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  color: u.$base-font-color;
+  &--fz32 {
+    font-size: 32px;
     line-height: 130%;
-    letter-spacing: -0.02em;
-    color: u.$base-font-color;
-    &--fz32 {
-        font-size: 32px;
-        line-height: 130%;
-        letter-spacing: 0;
+    letter-spacing: 0;
+    @include u.media("phone-wide", max) {
+      font-size: 22px;
     }
-    &--fz48 {
-        font-size: 48px;
-        line-height: 130%;
-        @include u.media('desktop', max){
-            font-size: u.rem(32);
-        }
+  }
+  &--fz48 {
+    font-size: 48px;
+    line-height: 130%;
+    @include u.media("desktop", max) {
+      font-size: u.rem(32);
     }
-    &--fz64 {
-        font-size: 64px;
-        line-height: 110%;
-        @include u.media('desktop', max){
-            font-size: 32px;
-            line-height: 130%;
-        }
+  }
+  &--fz64 {
+    font-size: 64px;
+    line-height: 110%;
+    @include u.media("desktop", max) {
+      font-size: 32px;
+      line-height: 130%;
     }
+  }
 }

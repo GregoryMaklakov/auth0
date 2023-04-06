@@ -1,0 +1,31 @@
+@use "utils" as u;
+
+.tab {
+  &__btn {
+    color: u.$gray-font-color;
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: 0 0 0 2px u.$purple;
+      }
+    }
+  }
+  &__btn--active {
+    color: u.$color-white;
+    background-color: u.$base-font-color;
+  }
+  &__items {
+    position: relative;
+  }
+
+  &__item {
+    display: none;
+    width: 100%;
+  }
+  &__item-title {
+    animation: fadeEffect 0.6s ease;
+  }
+
+  &__item--active {
+    display: block;
+  }
+}

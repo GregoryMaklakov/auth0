@@ -1,39 +1,36 @@
 // Config
-@use './config/reset';
-@use './config/common';
+@use "./config/reset";
+@use "./config/common";
 
 // Components
-@use './components/select-lang';
-@use './components/menu';
-@use './components/animate';
-@use './components/dropdown';
-@use './components/form';
-@use './components/buttons';
-@use './components/title';
-@use './components/swiper-slider';
+@use "./components/select-lang";
+@use "./components/menu";
+@use "./components/animate";
+@use "./components/dropdown";
+@use "./components/form";
+@use "./components/buttons";
+@use "./components/title";
+@use "./components/swiper-slider";
+@use "./components/tabs";
 
 // Blocks
-@use './blocks/header';
-@use './blocks/hero';
-@use './blocks/partners';
-@use './blocks/ciam';
-@use './blocks/implement';
-@use './blocks/leader';
-@use './blocks/youcando';
-@use './blocks/optimize';
-@use './blocks/resources';
-@use './blocks/building';
-@use './blocks/footer';
-
+@use "./blocks/header";
+@use "./blocks/hero";
+@use "./blocks/partners";
+@use "./blocks/ciam";
+@use "./blocks/implement";
+@use "./blocks/leader";
+@use "./blocks/youcando";
+@use "./blocks/optimize";
+@use "./blocks/resources";
+@use "./blocks/building";
+@use "./blocks/footer";
 
 //---
-@use './blocks/desc-hero';
-@use './blocks/info-block';
-@use './blocks/opti-block';
-@use './blocks/gymshark';
-
-
-
+@use "./blocks/desc-hero";
+@use "./blocks/info-block";
+@use "./blocks/opti-block";
+@use "./blocks/gymshark";
 
 // Подключение шрифтов ===========================================================================================================================================================================================================================================================================
 @import url(https://fonts.googleapis.com/css?family=Inter:regular,500&display=swap);

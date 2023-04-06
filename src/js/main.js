@@ -1,15 +1,8 @@
-import './text-hero-animation';
-import './menu';
+import "./text-hero-animation";
+import "./menu";
+import "./tabs";
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
-
-"use strict";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 AOS.init();
-
-
-
-
-
