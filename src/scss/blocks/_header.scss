@@ -19,8 +19,20 @@
     font-size: u.rem(14);
     line-height: 160%;
     color: u.$color-white;
+    height: 40px;
+    transition: height 0.3s ease 0s, padding-top 0.3s ease 0s,
+      padding-bottom 0.3s ease 0s;
     @include u.media("tablet-wide", max) {
       justify-content: center;
+    }
+  }
+  &__top-scroll {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 0px;
+    .header__top-regist,
+    .header__top-actions {
+      display: none;
     }
   }
 
@@ -31,9 +43,6 @@
     height: 64px;
     padding-top: 16px;
     padding-bottom: 16px;
-    @include u.media("tablet-wide", max) {
-      padding-top: 4px;
-    }
   }
   &__top-text {
     @include u.media("phone-wide", max) {
@@ -158,4 +167,7 @@
       }
     }
   }
+}
+.no-scroll {
+  overflow: hidden;
 }
